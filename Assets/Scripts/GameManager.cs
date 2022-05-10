@@ -7,7 +7,7 @@ public class GameManager : Singleton<GameManager> //INHERITANCE
     public Character[] character = new Character[3];
     public string playerName;
     [SerializeField] private GameObject[] gameSteps = new GameObject[3];
-    public int CurrentStepID { get; private set; }
+    public int CurrentStepID { get; private set; } //ENCAPSULATION
     //ABSTRACTION
     public void NextStep()
     {
@@ -25,7 +25,7 @@ public class GameManager : Singleton<GameManager> //INHERITANCE
         if (newName == "")
             return;
         playerName = newName;
-        NextStep();
+        NextStep(); //ABSTRACTION
     }
     public void QuitGame()
     {

@@ -33,10 +33,10 @@ public class CharacterCreator : MonoBehaviour
             return;
         if(currentCharacterID == 2)
         {
-            GameManager.Instance.NextStep();
+            GameManager.Instance.NextStep(); //ABSTRACTION
             return;
         }
-        NextCharacter();
+        NextCharacter(); //ABSTRACTION
     }
     private void NextCharacter()
     {

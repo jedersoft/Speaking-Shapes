@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class DialogueBox : Singleton<DialogueBox>
+public class DialogueBox : Singleton<DialogueBox> //Inheritance
 {
     [SerializeField] private GameObject box;
     [SerializeField] private TextMeshProUGUI text;
     public void ShowText(string textToSay)
     {
-        ShowUp();
+        ShowUp(); //ABSTRACTION
         text.text = textToSay;
     }
     private void ShowUp()
@@ -25,6 +25,6 @@ public class DialogueBox : Singleton<DialogueBox>
     public void Update()
     {
         if (Input.GetKeyDown(KeyCode.Tab))
-            Disappear();
+            Disappear(); //ABSTRACTION
     }
 }

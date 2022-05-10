@@ -8,10 +8,10 @@ public class UImanager : MonoBehaviour
     [SerializeField] private TMP_InputField nameField;
     public void StartGame()
     {
-        GameManager.Instance.StartGame(nameField.text);
+        GameManager.Instance.StartGame(nameField.text); //ABSTRACTION
     }
     public void ExitGame()
     {
-        GameManager.Instance.QuitGame();
+        GameManager.Instance.QuitGame(); //ABSTRACTION
     }
 }

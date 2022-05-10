@@ -21,7 +21,7 @@ public abstract class Character : MonoBehaviour
             mainColor = value;
             body.color = mainColor;
         }
-    }
+    } //ENCAPSULATION
     private Color eyeColor;
     public Color EyeColor
     {
@@ -37,7 +37,7 @@ public abstract class Character : MonoBehaviour
             leftEye.color = eyeColor;
             rightEye.color = eyeColor;
         }
-    }
+    }//ENCAPSULATION
     private string characterName;
     public string Name
     {
@@ -52,7 +52,7 @@ public abstract class Character : MonoBehaviour
             characterName = value;
             Greet(); //ABSTRACTION
         }
-    }
+    }//ENCAPSULATION
     protected void Talk(string text)
     {
         DialogueBox.Instance.ShowText(text);
@@ -64,6 +64,7 @@ public abstract class Character : MonoBehaviour
         Demand((Demands)DemandID);
     }
     private enum Demands { Food, Sleep, Special, Nothing};
+    //Polymorphism
     private void Demand(Demands demand)
     {
         switch(demand)
