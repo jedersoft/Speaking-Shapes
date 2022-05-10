@@ -27,8 +27,12 @@ public class GameManager : Singleton<GameManager> //INHERITANCE
         playerName = newName;
         NextStep();
     }
-    private void SetCharacterName(string newName)
+    public void QuitGame()
     {
-
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.ExitPlaymode();
+#else
+        Application.Quit();
+#endif
     }
 }

@@ -5,6 +5,7 @@ using UnityEngine;
 public class Playground : MonoBehaviour
 {
     public GameObject[] buttons = new GameObject[3];
+    [SerializeField] private GameObject endScreen;
     private void Start()
     {
         foreach(Character character in GameManager.Instance.character)
@@ -21,5 +22,11 @@ public class Playground : MonoBehaviour
         character.SayGoodbye();
         character.gameObject.SetActive(false);
         buttons[ID].SetActive(false);
+        foreach (var obj in GameManager.Instance.character)
+        {
+            if (obj.gameObject.activeSelf == true)
+                return;
+        }
+        endScreen.SetActive(true);
     }
 }
